@@ -32,7 +32,7 @@ sgd = SGD(lr=0.1, decay=1e-6, momentum=.99)
 model.compile(loss='mean_squared_error', optimizer=sgd)
 
 # Train the model and log weights
-model.fit(X, y, nb_epoch=100, batch_size=4, show_accuracy=True, verbose=1, callbacks=[WeightLogger()])
+model.fit(X, y, nb_epoch=200, batch_size=4, show_accuracy=True, verbose=1, callbacks=[WeightLogger()])
 
 # print the truth table output for our original X
 print model.predict(X)
